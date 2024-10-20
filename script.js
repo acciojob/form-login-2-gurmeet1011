@@ -1,15 +1,16 @@
-//your JS code here. If required.
-function displayFormInfo() {
-            // Prevent form from submitting normally
-            // Retrieve form values
-            const firstName = document.getElementById('first-name').value;
-            const lastName = document.getElementById('last-name').value;
-            const phoneNumber = document.getElementById('phone').value;
-            const email = document.getElementById('email').value;
+function displayFormInfo(event) {
+    // Prevent the form from submitting and refreshing the page
+    event.preventDefault();
 
-            // Construct the alert message
-            const alertMessage = `First Name: ${firstName} Last Name: ${lastName} Phone Number: ${phoneNumber} Email ID: ${email}`;
+    // Retrieve form values by using getElementById
+    const firstName = document.getElementById('firstName').value;
+    const lastName = document.getElementById('lastName').value;
+    const phoneNumber = document.getElementById('phoneNumber').value;
+    const email = document.getElementById('email').value;
 
-            // Display the alert with form info
-            alert(alertMessage);
-        }
+    // Construct the alert message with spaces between the field values
+    const alertMessage = `First Name: ${firstName} Last Name: ${lastName} Phone Number: ${phoneNumber} Email ID: ${email}`;
+
+    // Display the alert with form info
+    alert(alertMessage);
+}
